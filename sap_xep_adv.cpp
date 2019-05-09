@@ -3,8 +3,8 @@
 // nhap 1 mang gom n ptu voi dk khong trung nhau => sap xep mang theo thu tu tang dan 
 int main()
 {
-    int arr[10];
-    for(int i = 0; i < 10; i++) {
+    int arr[10], n = 10;
+    for(int i = 0; i < n; i++) {
         printf("nhap arr[%d] ", i);
         scanf("%d", &arr[i]);
         for(int j = 0; j < i; j++) {
@@ -14,7 +14,7 @@ int main()
             }
         }
     }
-    int tmp, i, j, n = 10;
+    int tmp, i, j;
     for (j=1; j<n; j++) {
         i = j - 1;
         tmp = arr[j];
