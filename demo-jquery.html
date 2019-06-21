@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>haha</title>
+	<script type="text/javascript" src="lib/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div id="div-jq" class="demo-jq">lala</div>
+	<input type="text" name="text" id="div-text" class="demo-text">
+	<button type="button" onclick="Green()">button</button>
+	<button type="button" onclick="Show()">show</button>
+	<button type="button" onclick="Hide()">hide</button>
+	<button type="button" onclick="Affect()">affect</button>
+</body> 
+<script type="text/javascript">
+	var d = $("#div-jq");
+	function Green() {
+			// d.css("background-color", "green");
+			d.css({
+				"background-color" : "green",
+				"font-size" : "200px"
+			});
+			var ip = $("#div-text");
+			var val = ip.val();
+			d.animate({
+				"width" : val + "px",
+			}, 1000);
+	}
+	function Show() {
+		d.fadeOut(1000);
+	}function Hide() {
+		d.fadeIn(1000);
+	}
+	function Affect() {
+		// d.toggle(1000);
+		// d.fadeToggle(1000);
+		d.slideToggle(1000);
+	}
+</script> 
+</html>
